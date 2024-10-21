@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    background-image: url('/images/b1.jpg'); /* Path to your background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+}
+
+.container {
+    width: 80%;
+    max-width: 600px; /* Maximum width for the container */
+    margin: 100px auto; /* Center the container vertically with top margin */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0.9; /* Slightly transparent to show the background */
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.buttons button {
+    background-color: hsl(171, 39%, 49%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.buttons button:hover {
+    background-color: #45a049;
+}
+
+.form-container {
+    margin: 20px 0;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type="text"], textarea {
+    font-size: 16px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}

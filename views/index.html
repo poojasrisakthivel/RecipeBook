@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Recipe Book</h1>
+
+        <!-- Buttons to Add, Search, Delete Recipes -->
+        <div class="buttons">
+            <button onclick="showAddForm()">Add Recipe</button>
+            <button onclick="showSearchForm()">Search Recipe</button>
+            <button onclick="showDeleteForm()">Delete Recipe</button>
+        </div>
+
+        <!-- Add Recipe Form -->
+        <div id="addRecipeForm" class="form-container" style="display:none;">
+            <h2>Add a New Recipe</h2>
+            <form id="addRecipeFormAction" action="/add" method="POST">
+                <input type="text" name="name" placeholder="Recipe Name" required><br>
+                <textarea name="ingredients" placeholder="Ingredients" required></textarea><br>
+                <textarea name="instructions" placeholder="Instructions" required></textarea><br>
+                <div class ="buttons">
+                    <button  type="submit">Submit</button>
+                </div>
+                
+            </form>
+        </div>
+
+        <!-- Search Recipe Form -->
+        <div id="searchRecipeForm" class="form-container" style="display:none;">
+            <h2>Search for a Recipe</h2>
+            <form id="searchRecipeFormAction">
+                <input type="text" name="name" placeholder="Recipe Name" required><br>
+                <div class ="buttons">
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+            <div id="searchResult"></div>
+        </div>
+
+        <!-- Delete Recipe Form -->
+        <div id="deleteRecipeForm" class="form-container" style="display:none;">
+            <h2>Delete a Recipe</h2>
+            <form id="deleteRecipeFormAction" action="/delete" method="POST">
+                <input type="text" name="name" placeholder="Recipe Name" required><br>
+                <div class ="buttons">
+                    <button type="submit">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/scripts.js"></script>
+</body>
+</html>
